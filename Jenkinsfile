@@ -2,20 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                echo 'Building...'
+                git branch: 'main',
+                    credentialsId: 'git-ssh-key',
+                    url: 'git@github.com:Faiza-Alatf/faiza.git'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-            }
-        }
+
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
+                sh '''
+                    echo "Deploying files via Jenkins..."
+                    cp -r * /var/www/html/
+                '''
             }
         }
     }
 }
+
