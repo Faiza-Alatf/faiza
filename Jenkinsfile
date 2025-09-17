@@ -8,7 +8,7 @@ pipeline {
             steps {
                 sh '''
                     echo "Deploying files via Jenkins..."
-                    cp -r * /var/www/html/
+                   sudo cp -r index.html welcome.html /var/www/html/
                 '''
             }
         }
