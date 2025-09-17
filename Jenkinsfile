@@ -2,13 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    credentialsId: 'git-ssh-key',
-                    url: 'git@github.com:Faiza-Alatf/faiza.git'
-            }
-        }
+       
 
         stage('Deploy') {
             steps {
