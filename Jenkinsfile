@@ -2,18 +2,8 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout welcome.html only') {
-            steps {
-                checkout([$class: 'GitSCM',
-                    branches: [[name: '*/main']],
-                    extensions: [
-                        [$class: 'SparseCheckoutPaths',
-                         sparseCheckoutPaths: [[path: 'welcome.html']]]
-                    ],
-                    userRemoteConfigs: [[url: 'git@github.com:Faiza-Alatf/faiza.git']]
-                ])
-            }
-        }
+        
+        
 
         stage('Deploy') {
             steps {
