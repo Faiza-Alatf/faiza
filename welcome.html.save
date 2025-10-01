@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Styled Page</title>
+  <style>
+    body {
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: darkblue;
+    }
+    p {
+      color: darkgreen;
+      font-size: 18px;
+    }
+    button {
+      background-color: darkblue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: navy;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Simple Page</h1>
+  <p>This is a paragraph styled with CSS.</p>
+  <button>Click Me</button>
+</body>
+</html>
