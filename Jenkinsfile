@@ -4,7 +4,7 @@ pipeline {
     environment {
         USERNAME = "faiza"
         SERVER = "192.168.56.105"
-        DEPLOY_PATH = "/var/www/test"
+        DEPLOY_PATH = "/var/www/html/maham/"
     }
 
     stages {
@@ -15,6 +15,7 @@ pipeline {
                     ssh ${USERNAME}@${SERVER} "sudo systemctl restart apache2"
                 """
             }
-        }
-    }
+        }
+    }
 }
+
