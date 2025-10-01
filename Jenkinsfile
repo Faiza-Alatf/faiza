@@ -4,7 +4,7 @@ pipeline {
     environment {
         USERNAME = "faiza"
         SERVER = "192.168.56.105"
-        DEPLOY_PATH = "/var/www/html/maham"  // Apache directory
+        DEPLOY_PATH = "/var/www/html/maham/"
     }
 
     stages {
